@@ -1,8 +1,34 @@
-.index-navbar
-  .index-navbar__container
-    = link_to "appartements", flats_path, class: "index-navbar__item index-navbar__index index-navbar__item_active"
-    = link_to "emplacement", "#", class: "index-navbar__item index-navbar__location"
-    = link_to "pourquoi réserver ici ?", "#pourquoi-réserver?", class: "index-navbar__item index-navbar__location"
-  =link_to "contact", "#contact", class:  "index-navbar__item index-navbar__contact"
-.red-box
-.blue-box
+.navbar
+  .navbar__container
+    = link_to "appartements", flats_path, class: "navbar__item navbar__index navbar__item_active"
+    = link_to "emplacement", "#", class: "navbar__item navbar__location"
+    = link_to "pourquoi réserver ici ?", "#pourquoi-réserver?", class: "navbar__item navbar__location"
+  =link_to "contact", "#contact", class:  "navbar__item navbar__contact"
+.header-left{ style: "background-image:  url(https://images.pexels.com/photos/2459/stairs-home-loft-lifestyle.jpg?cs=srgb&dl=comfortable-condo-condominium-2459.jpg)" }
+  %h1.header-left__main-title= "3 Appartements à louer près du centre de Bordeaux"
+  %h2.header-left__subtitle= "Facile d’accès, situé dans le quartier de chartrons. Idéal pour les familles."
+.flats
+  .flats__item.flat
+    %span.flat__id= "01"
+    %h2.flat__name
+      = "Maison avec terrasse - 110m"
+      %sup= "2"
+    %p.flat__description= "Spacieuse et agréable : composé d'un salon de 45m² et de sa cuisine toute équipée, d'une suite parentale, d'une chambre mansardée, d'une mezzanine et d'une terrasse privative de 30m² équipée d'un salon de jardin."
+  .flats__item.flat
+    %span.flat__id= "02"
+    %h2.flat__name
+      = "Maison avec terrasse - 110m"
+      %sup= "2"
+    %p.flat__description= "Spacieuse et agréable : composé d'un salon de 45m² et de sa cuisine toute équipée, d'une suite parentale, d'une chambre mansardée, d'une mezzanine et d'une terrasse privative de 30m² équipée d'un salon de jardin."
+  .flats__item.flat
+    %span.flat__id= "03"
+    %h2.flat__name
+      = "Maison avec terrasse - 110m"
+      %sup= "2"
+    %p.flat__description= "Spacieuse et agréable : composé d'un salon de 45m² et de sa cuisine toute équipée, d'une suite parentale, d'une chambre mansardée, d'une mezzanine et d'une terrasse privative de 30m² équipée d'un salon de jardin."
+  .flats__item.flat
+    %span.flat__id= "04"
+    %h2.flat__name
+      = "Maison avec terrasse - 110m"
+      %sup= "2"
+    %p.flat__description= "Spacieuse et agréable : composé d'un salon de 45m² et de sa cuisine toute équipée, d'une suite parentale, d'une chambre mansardée, d'une mezzanine et d'une terrasse privative de 30m² équipée d'un salon de jardin."

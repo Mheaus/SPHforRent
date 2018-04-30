@@ -43,6 +43,9 @@ $red: #FF565C;
   font-style: normal;
 }
 
+html {
+  height: 100%;
+}
 body {
   height: 100%;
   width: 100%;
@@ -50,6 +53,7 @@ body {
   font-family: 'OpenSans';
   color: rgba(0, 0, 0, 0.85);
   box-sizing: border-box;
+  background-color: $red;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -69,8 +73,9 @@ a {
   }
 }
 
-.index-navbar {
+.navbar {
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   width: calc(100% - 2rem);
@@ -78,38 +83,109 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 1rem;
-  .index-navbar__container {}
-  .index-navbar__item {
+  border-bottom: 1px solid #EBEBEB;
+  .navbar__container {}
+  .navbar__item {
     position: relative;
     text-transform: uppercase;
     opacity: .2;
     padding: 0 1rem;
     letter-spacing: .1rem;
-    // &::after {
-    //   content: " ";
-    //   position: absolute;
-    //   top: 1.5rem;
-    //   left: 0;
-    //   height: 2px;
-    //   width: 100%;
-    //   background-color: $red;
-    //   opacity: 0;
-    //   transition: all 1s ease;
-    // }
     &:hover {
       opacity: .5;
-      // &::after {
-      //   opacity: 1;
-      //   top: 1.25rem;
-      // }
     }
-    &.index-navbar__item_active {
+    &.navbar__item_active {
       opacity: .85;
     }
   }
 }
-.red-box {
-  background: linear-gradient($red, black);
-  height: 120vh;
+.header-left {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
   width: 50%;
+  float: left;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #FFF;
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+    z-index: -1;
+    border-bottom: .2rem solid $red;
+  }
+  .header-left__main-title {
+    margin: .5rem 1.5rem;
+    width: 65%;
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .header-left__subtitle {
+    margin: .5rem 1.5rem 4rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+  }
+}
+.flats {
+  padding: 5rem 0;
+  background-color: #F9FAFC;
+  height: 100%;
+  width: 50%;
+  float: right;
+  .flats__item.flat {
+    background-color: #F9FAFC;
+    position: relative;
+    padding: 4.75rem 4rem 2rem 7.5rem;
+    font-weight: 300;
+    transition: all .25s ease;
+    .flat__id {
+      position: absolute;
+      top: 2.5rem;
+      left: 4rem;
+      opacity: .2;
+      font-size: 5rem;
+      letter-spacing: -.25rem;
+      font-weight: normal;
+    }
+    .flat__name {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+    .flat__description {
+      color: rgba(#1d1f24, 0.8);
+      position: relative;
+      margin: 1rem 0;
+      &::before {
+        content: " ";
+        position: absolute;
+        bottom: -1.63rem;
+        left: 0;
+        width: 5rem;
+        height: .13rem;
+        background-color: $red;
+        z-index: 1;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: -1.575rem;
+        left: 0;
+        width: 100%;
+        height: .075rem;
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+    }
+    &:hover {
+      background-color: rgba(#000000, 0.01);
+    }
+  }
 }
